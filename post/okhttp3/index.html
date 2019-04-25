@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>OkHttp3使用 | 小书本</title>
+<meta name="description" content="&lt;p style=&#34;text-align: center&#34;&gt;一起嗨吗&lt;/p&gt;">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1556163202156">
+<link rel="stylesheet" href="https://lsmya.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://lsmya.github.io">
+        <img src="https://lsmya.github.io/images/avatar.png?v=1556163202156" class="site-logo">
+        <h1 class="site-title">小书本</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://lsmya.github.io" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="https://lsmya.github.io/archives" class="site-nav">
+            目录
+          </a>
+        
+      
+        
+          <a href="https://lsmya.github.io/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="https://lsmya.github.io/post/about/" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/lsmya" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      <p style="text-align: center">一起嗨吗</p>
+    </div>
+    <div class="site-footer">
+      <p style="text-align: center">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">OkHttp3使用</h2>
+            <div class="post-date">2019-04-25</div>
+            
+            <div class="post-content">
+              <ul>
+<li>
+<h3 id="添加依赖">添加依赖</h3>
+</li>
+</ul>
+<pre><code>implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+</code></pre>
+<p>目前最新的稳定版可能已经不是<code>3.11.0</code>了，可以到官方GitHub来查看最新版本 <a href="https://github.com/square/okhttp">https://github.com/square/okhttp</a></p>
+<p>okio最新地址：<a href="https://github.com/square/okio">https://github.com/square/okio</a></p>
+<ul>
+<li>
+<h3 id="异步get">异步GET</h3>
+</li>
+</ul>
+<pre><code>String url = &quot;http://wwww.baidu.com&quot;;
+OkHttpClient mOkHttpClient = new OkHttpClient();
+Request mRequest = new Request.Builder()
+        .url(url)
+        .addHeader(&quot;key&quot;, &quot;value&quot;)
+        .get()//默认就是GET请求，可以不写
+        .build();
+mOkHttpClient.newCall(mRequest).enqueue(new Callback() {
+    @Override
+    public void onFailure(Call call, IOException e) {
+    }
+
+    @Override
+    public void onResponse(Call call, Response response) throws IOException {
+        String data = response.body().string();//返回数据
+    }
+});
+</code></pre>
+<ul>
+<li>
+<h3 id="异步post提交表单">异步POST提交表单</h3>
+</li>
+</ul>
+<p>与GET相比，POST多了一个请求体（RequestBody）</p>
+<pre><code>String url = &quot;&quot;;
+OkHttpClient mOkHttpClient = new OkHttpClient();
+RequestBody requestBody = new FormBody.Builder()
+        .add(&quot;key&quot;, &quot;value&quot;)
+        .build();
+Request mRequest = new Request.Builder()
+        .url(url)
+        .post(requestBody)
+        .build();
+
+mOkHttpClient.newCall(mRequest).enqueue(new Callback() {
+    @Override
+    public void onFailure(Call call, IOException e) {
+    }
+
+    @Override
+    public void onResponse(Call call, Response response) throws IOException {
+    }
+});
+</code></pre>
+<ul>
+<li>
+<h3 id="异步post提交字符串">异步POST提交字符串</h3>
+</li>
+</ul>
+<pre><code>String url = &quot;&quot;;
+MediaType mediaType = MediaType.parse(&quot;text/x-markdown; charset=utf-8&quot;);
+String requestBody = &quot;I'm String&quot;;
+Request request = new Request.Builder()
+        .url(url)
+        .post(RequestBody.create(mediaType, requestBody))
+        .build();
+OkHttpClient okHttpClient = new OkHttpClient();
+okHttpClient.newCall(request).enqueue(new Callback() {
+    @Override
+    public void onFailure(Call call, IOException e) {
+    }
+
+    @Override
+    public void onResponse(Call call, Response response) throws IOException {
+    }
+});
+</code></pre>
+<ul>
+<li>
+<h3 id="post同时上传文件和参数">POST同时上传文件和参数</h3>
+</li>
+</ul>
+<pre><code>OkHttpClient mOkHttpClient = new OkHttpClient();
+String url = &quot;&quot;;
+File file = new File(&quot;path&quot;);
+String TYPE = &quot;application/octet-stream&quot;;
+RequestBody fileBody = RequestBody.create(MediaType.parse(TYPE), file);
+RequestBody requestBody = new MultipartBody.Builder()
+        .addFormDataPart(&quot;key&quot;, &quot;value&quot;)
+        .setType(MultipartBody.FORM)
+        .addFormDataPart(&quot;fileKey&quot;, file.getName(), fileBody)
+        .build();
+
+Request request = new Request.Builder()
+        .url(url)
+        .addHeader(&quot;key&quot;, &quot;value&quot;)
+        .post(requestBody)
+        .build();
+
+mOkHttpClient.newCall(request).enqueue(new Callback() {
+    @Override
+    public void onFailure(Call call, IOException e) {
+
+    }
+
+    @Override
+    public void onResponse(Call call, Response response) throws IOException {
+
+    }
+});
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://lsmya.github.io/tag/okhttp3" class="tag">
+                    okhttp3
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://lsmya.github.io/post/about">
+                  <h3 class="post-title">
+                    关于
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
