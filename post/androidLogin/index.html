@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | 小书本</title>
+<title>Android第三方登录（QQ、WeChat） | 小书本</title>
 <meta name="description" content="&lt;p style=&#34;text-align: center&#34;&gt;一起嗨吗&lt;/p&gt;">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -95,14 +95,91 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-04-25</div>
+            <h2 class="post-title">Android第三方登录（QQ、WeChat）</h2>
+            <div class="post-date">2019-04-30</div>
             
             <div class="post-content">
-              <p>这是我呀</p>
+              <p><a href="https://github.com/lsmya/LoginDemo">GitHub地址</a></p>
+<h3 id="支持微信-qq-微博等第三方登录">支持微信、QQ、微博等第三方登录</h3>
+<pre><code>api 'com.github:otherlogin:+'
+</code></pre>
+<p><a href="https://bintray.com/lovelylsmya/maven/otherlogin/_latestVersion"> <img src="https://api.bintray.com/packages/lovelylsmya/maven/otherlogin/images/download.svg" alt="Download"> </a></p>
+<h4 id="1-微信登录">1、微信登录</h4>
+<ul>
+<li>注册微信APP_ID：</li>
+</ul>
+<pre><code>IWXAPI iwxapi = WeChatUtil.register(this, WXAPP_ID);
+</code></pre>
+<ul>
+<li>在需要打开微信的地方使用(需要传入注册时返回的IWXAPI)：</li>
+</ul>
+<pre><code> WeChatUtil.openWeChat(iwxapi);
+</code></pre>
+<ul>
+<li>在根目录下新建wxapi文件夹，里面新建一个activity（WXEntryActivity）继承自BaseWXEntryActivity</li>
+</ul>
+<pre><code>public class WXEntryActivity extends BaseWXEntryActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_wxentry);
+    }
+    @Override
+    public void success(BaseResp baseResp, SendAuth.Resp resp) {
+        //打开微信并回调成功
+    }
+    @Override
+    public void cancel(BaseResp baseResp, SendAuth.Resp resp) {
+        //打开微信后取消
+    }
+    @Override
+    public void denied(BaseResp baseResp, SendAuth.Resp resp) {
+        //打开微信被拒绝
+    }
+}
+
+</code></pre>
+<h4 id="2-qq登录">2、QQ登录</h4>
+<ul>
+<li>打开手机QQ</li>
+</ul>
+<pre><code>Tencentutil.openQQ(MainActivity.this, &quot;app_id&quot;, iUiListener);
+</code></pre>
+<ul>
+<li>在onActivityResult回调中增加如下代码：</li>
+</ul>
+<pre><code>if (requestCode == 11101){
+    Tencent.onActivityResultData(requestCode, resultCode, data, iUiListener);
+}
+</code></pre>
+<ul>
+<li>修改主工程的build.gradle文件，android标签内的defaultConfig里面增加如下代码：</li>
+</ul>
+<pre><code>manifestPlaceholders = [tencent_app_id: &quot;你的appId&quot;]
+</code></pre>
+<ul>
+<li>打开手机QQ时传入的IUiListener对象的onComplete(Object o)方法会返回你想要的数据</li>
+</ul>
 
             </div>
             
+              <div class="tag-container">
+                
+                  <a href="https://lsmya.github.io/tag/android" class="tag">
+                    android
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://lsmya.github.io/post/-tCqrpiVs">
+                  <h3 class="post-title">
+                    Android使用Lambda表达式
+                  </h3>
+                </a>
+              </div>
             
 
             
