@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>ios--解决 Reading from private effective user settings | 小书本</title>
+<title>targetSdkVersion 28 http请求报错CLEARTEXT communication to *** not permitted by network security policy | 小书本</title>
 <meta name="description" content="&lt;p style=&#34;text-align: center&#34;&gt;小可爱一起嗨吗&lt;/p&gt;">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -95,22 +95,25 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">ios--解决 Reading from private effective user settings</h2>
-            <div class="post-date">2019-05-09</div>
+            <h2 class="post-title">targetSdkVersion 28 http请求报错CLEARTEXT communication to *** not permitted by network security policy</h2>
+            <div class="post-date">2019-05-16</div>
             
             <div class="post-content">
-              <ol>
-<li>在Xcode顶部菜单栏选择：Product --&gt; Scheme --&gt; Edit Scheme</li>
-<li>在左边的菜单栏中选择：Run --&gt; Arguments</li>
-<li>在 Environment Variables 点击添加按钮，添加变量名为 OS_ACTIVITY_MODE 的变量，Value为 NO</li>
-</ol>
+              <p>从6.0开始Android引入了对Https的推荐支持，但是P（api28）的系统上面默认所有Http的请求都被拦截
+<application android:usesCleartextTraffic="true|false">
+原本这个属性的默认值为true</p>
+<h3 id="解决办法">解决办法</h3>
+<p>在AnroidManifest.xml中的application添加：</p>
+<pre><code>&lt;application android:usesCleartextTraffic=&quot;true&quot;&gt;
+</code></pre>
+<p>但是更好的解决办法是在应用程序中使用https的请求</p>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://lsmya.github.io/tag/ios" class="tag">
-                    ios
+                  <a href="https://lsmya.github.io/tag/android" class="tag">
+                    android
                   </a>
                 
               </div>
@@ -118,9 +121,9 @@
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://lsmya.github.io/post/androidLogin">
+                <a href="https://lsmya.github.io/post/Ibf3l7ix0">
                   <h3 class="post-title">
-                    Android第三方登录（QQ、WeChat）
+                    recyclerView的item点击事件在onCreateViewHolder中写和在onBindViewHolder中写有何区别？如何优化？
                   </h3>
                 </a>
               </div>
