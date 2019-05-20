@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1558001079594">
+<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1558318614570">
 <link rel="stylesheet" href="https://lsmya.github.io/styles/main.css">
 
 
@@ -29,7 +29,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://lsmya.github.io">
-        <img src="https://lsmya.github.io/images/avatar.png?v=1558001079594" class="site-logo">
+        <img src="https://lsmya.github.io/images/avatar.png?v=1558318614570" class="site-logo">
         <h1 class="site-title">小书本</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -101,20 +101,24 @@
             <div class="post-content">
               <h3 id="1androidscaletypecenter">1.android:scaleType=&quot;center&quot;</h3>
 <p>保持原图的大小，显示在ImageView的中心。当原图的size大于ImageView的size时，多出来的部分被截掉。</p>
-<h3 id="2androidscaletypecenter_inside">2.android:scaleType=&quot;center_inside&quot;</h3>
+<h3 id="2androidscaletypecenterinside">2.android:scaleType=&quot;centerInside&quot;</h3>
 <p>以原图正常显示为目的，如果原图大小大于ImageView的size，就按照比例缩小原图的宽高，居中显示在ImageView中。如果原图size小于ImageView的size，则不做处理居中显示图片。</p>
-<h3 id="3androidscaletypecenter_crop">3.android:scaleType=&quot;center_crop&quot;</h3>
+<h3 id="3androidscaletypecentercrop">3.android:scaleType=&quot;centerCrop&quot;</h3>
 <p>以原图填满ImageView为目的，如果原图size大于ImageView的size，则与center_inside一样，按比例缩小，居中显示在ImageView上。如果原图size小于ImageView的size，则按比例拉升原图的宽和高，填充ImageView居中显示。</p>
 <h3 id="4androidscaletypematrix">4.android:scaleType=&quot;matrix&quot;</h3>
 <p>不改变原图的大小，从ImageView的左上角开始绘制，超出部分做剪切处理。</p>
-<h3 id="5androdscaletypefit_xy">5.androd:scaleType=&quot;fit_xy&quot;</h3>
+<h3 id="5androdscaletypefitxy">5.androd:scaleType=&quot;fitXY&quot;</h3>
 <p>把图片按照指定的大小在ImageView中显示，拉伸显示图片，不保持原比例，填满ImageView.</p>
-<h3 id="6androidscaletypefit_start">6.android:scaleType=&quot;fit_start&quot;</h3>
+<h3 id="6androidscaletypefitstart">6.android:scaleType=&quot;fitStart&quot;</h3>
 <p>把原图按照比例放大缩小到ImageView的高度，显示在ImageView的start（前部/上部）。</p>
-<h3 id="7androidsacletypefit_center">7.android:sacleType=&quot;fit_center&quot;</h3>
+<h3 id="7androidsacletypefitcenter">7.android:sacleType=&quot;fitCenter&quot;</h3>
 <p>把原图按照比例放大缩小到ImageView的高度，显示在ImageView的center（中部/居中显示）。</p>
-<h3 id="8androidscaletypefit_end">8.android:scaleType=&quot;fit_end&quot;</h3>
+<h3 id="8androidscaletypefitend">8.android:scaleType=&quot;fitEnd&quot;</h3>
 <p>把原图按照比例放大缩小到ImageView的高度，显示在ImageVIew的end（后部/尾部/底部）</p>
+<p>效果图：
+<img src="https://lsmya.github.io/images/scaleType.png" alt="">
+原图：
+<img src="https://lsmya.github.io/images/scaleType%E5%8E%9F%E5%9B%BE.jpg" alt=""></p>
 
             </div>
             
