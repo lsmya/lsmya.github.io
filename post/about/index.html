@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1560309445861">
+<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1560419160015">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://lsmya.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://lsmya.github.io">
-        <img src="https://lsmya.github.io/images/avatar.png?v=1560309445861" class="site-logo">
+        <img src="https://lsmya.github.io/images/avatar.png?v=1560419160015" class="site-logo">
         <h1 class="site-title">小书本</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -126,6 +126,7 @@
 <li>熟悉使用QQ、微信、微博登录、分享及第三方支付等功能的 SDK</li>
 <li>熟悉融云、环信、野火即时通讯</li>
 <li>熟悉极光推送、mob推送</li>
+<li>了解kotlin开发语言</li>
 </ul>
 <h2 id="工作经历">工作经历</h2>
 <h4 id="项目一遇见你">项目一：遇见你</h4>
@@ -146,17 +147,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="项目二排队app">项目二：排队app</h4>
-<ul>
-<li>简介：排队app是一款为餐厅、医院、超市等场景解决排队秩序混乱而产生的软件，快取快送、万能排队、抢座占座、代买代购。</li>
-<li>项目职责：负责UI界面的编写与开发，以及开发一些简单的业务逻辑</li>
-<li>技术点：
-<ul>
-<li>使用QQ、微信和微博的登录及分享</li>
-</ul>
-</li>
-</ul>
-<h4 id="项目三智慧餐厅">项目三：智慧餐厅</h4>
+<h4 id="项目二智慧餐厅">项目二：智慧餐厅</h4>
 <ul>
 <li>简介：这是一款商家版APP，提醒商家有新订单并实时打印订单小票。</li>
 <li>项目职责：根据设计图完成UI界面，根据需求完成所有移动端的功能</li>
@@ -168,7 +159,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="项目四idme排队系统">项目四：IDME排队系统</h4>
+<h4 id="项目三idme排队系统">项目三：IDME排队系统</h4>
 <ul>
 <li>简介：商家版APP，用于商家取号并打印订单小票、查看订单、营业额等场景。</li>
 <li>项目职责：独立完成UI界面以及所有功能的开发</li>
@@ -179,7 +170,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="项目五协作平面10">项目五：协作平面1.0</h4>
+<h4 id="项目四协作平面10">项目四：协作平面1.0</h4>
 <ul>
 <li>简介：利用互联网实现办公自动化的技术。它将原有OA系统上的办件、公文、通讯录、日程、文件管理、通知公告等功能迁移到手机，并支持Office文件的预览，让您可以随时随地进行掌上办公，对于突发性事件和紧急性事件有极其高效和出色的支持，是政府人员、管理者、市场人员等贴心的掌上办公产品。</li>
 <li>项目职责：
@@ -199,7 +190,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="项目六协作平面20">项目六：协作平面2.0</h4>
+<h4 id="项目五协作平面20">项目五：协作平面2.0</h4>
 <ul>
 <li>简介：协作平面1.0的升级版，界面重新设计，整个项目进行优化升级，增加部分新功能。</li>
 <li>项目职责：
@@ -213,37 +204,41 @@
 <ul>
 <li>使用mobpush配合厂商通道进行新消息的推送提醒</li>
 <li>使用arouter进行组件化开发</li>
-<li>使用自己封装的<a href="https://github.com/lsmya/LoginDemo">工具库</a>，在原有用户系统上集成QQ、微信登录</li>
+<li>使用自己封装的<a href="https://github.com/lsmya/LoginDemo">QQ、微信登录工具库</a>，在原有用户系统上集成QQ、微信登录</li>
 <li>支持设置字体大小</li>
 <li>集成图案解锁功能</li>
 <li>配合后台进行账号与设备的绑定，保证账号安全</li>
-<li>封装链式调用的okhttp进行网络请求</li>
+<li>封装链式调用的okhttp进行网络请求（<a href="https://github.com/lsmya/AndroidLibrary/blob/master/http.md">支持get、post、delete、put、上传文件进度回调、下载进度回调、更换baseUrl</a>）</li>
+<li><a href="../../BB2sAujIU/index.html">优化处理app启动页白屏现象</a></li>
 </ul>
 </li>
 </ul>
-<h4 id="项目七中国铁路移动办公系统">项目七：中国铁路移动办公系统</h4>
+<h4 id="项目六中国铁路移动办公系统">项目六：中国铁路移动办公系统</h4>
 <ul>
 <li>简介：因保密原则不做介绍</li>
 <li>项目职责：
 <ul>
-<li>前期负责项目新功能的开发、定制</li>
-<li>后期交与其他同事然后在部门负责人的角度进行跟进、检查项目进度，最终保证项目完美验收</li>
+<li>前期负责项目新功能的开发、定制，基础框架的搭建以及与客户的沟通</li>
+<li>后期交于其他同事然后在部门经理的角度进行跟进、检查项目进度，最终保证项目完美验收</li>
+<li>负责提供基础工具包、工具类，以减少开发人员的工作量</li>
 </ul>
 </li>
 <li>技术点：
 <ul>
 <li>使用表单动态生成，后台可随意更改表单字段、显示顺序</li>
-<li>在后期以部门负责人的身份进行管理项目，增长了很多管理层次的经验</li>
+<li>在后期以部门经理的身份进行管理项目，增长了很多管理层次的经验</li>
 </ul>
 </li>
 </ul>
-<h4 id="项目八广东南海移动办公系统">项目八：广东南海移动办公系统</h4>
+<h4 id="项目七广东南海移动办公系统">项目七：广东南海移动办公系统</h4>
 <ul>
 <li>简介：因保密原则不做介绍</li>
 <li>项目职责：
 <ul>
 <li>负责整个项目（Android端、h5端）的管理，并进行主要模块的开发、设计</li>
 <li>协同测试人员测试，修改、完善项目</li>
+<li>负责提供基础工具包、工具类，以减少开发人员的工作量</li>
+<li>负责与客户沟通</li>
 </ul>
 </li>
 <li>技术点：
@@ -254,7 +249,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="项目九云南黄金集团移动办公系统">项目九：云南黄金集团移动办公系统</h4>
+<h4 id="项目八云南黄金集团移动办公系统">项目八：云南黄金集团移动办公系统</h4>
 <ul>
 <li>简介：因保密原则不做介绍</li>
 <li>项目职责：
@@ -266,6 +261,16 @@
 <li>技术点
 <ul>
 <li>将常用工具类、base模块进行封装打包并上传到JCenter，并随时更新版本</li>
+</ul>
+</li>
+</ul>
+<h4 id="项目九排队app">项目九：排队app</h4>
+<ul>
+<li>简介：排队app是一款为餐厅、医院、超市等场景解决排队秩序混乱而产生的软件，快取快送、万能排队、抢座占座、代买代购。</li>
+<li>项目职责：负责UI界面的编写与开发，以及开发一些简单的业务逻辑</li>
+<li>技术点：
+<ul>
+<li>使用QQ、微信和微博的登录及分享</li>
 </ul>
 </li>
 </ul>
