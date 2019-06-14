@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>svn | 小书本</title>
+<title>关闭Dialog后软键盘无法关闭问题 | 小书本</title>
 <meta name="description" content="&lt;p style=&#34;text-align: center&#34;&gt;小可爱一起嗨吗&lt;/p&gt;">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -95,28 +95,52 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: svn</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://lsmya.github.io/post/4nYuIAmMV">
-                  <h2 class="post-title">svn连接https报错问题: E230001: Server SSL certificate verification failed: certificate issued</h2>
-                </a>
-                <div class="post-date">
-                  2019-06-04
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
+          <div class="post-detail">
+            <h2 class="post-title">关闭Dialog后软键盘无法关闭问题</h2>
+            <div class="post-date">2019-06-14</div>
+            
+            <div class="post-content">
+              <p>我们经常会为Dialog设置监听 <code>setOnDismissListener</code> 或者 <code>setOnCancelListener</code> 来进行软键盘回收处理，但是此时持有软键盘的 <code>Edittext</code> 对象已经被回收所以无法进行响应处理，最终导致我们无法正常收起软键盘。</p>
+<p>解决办法，重写Dialog的 <code>dismiss</code>方法：</p>
+<pre><code>@Override
+public void dismiss() {
+    View view = getCurrentFocus();
+    if (view instanceof TextView) {
+        InputMethodManager mInputMethodManager = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        mInputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.RESULT_UNCHANGED_SHOWN);
+    }
+    super.dismiss();
+}
+</code></pre>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://lsmya.github.io/tag/dialog" class="tag">
+                    Dialog
+                  </a>
+                
+                  <a href="https://lsmya.github.io/tag/android" class="tag">
+                    android
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://lsmya.github.io/post/8Af10DBI2">
+                  <h3 class="post-title">
+                    android常用自定义view、工具类、dialog、http请求、6.0权限申请
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
 
         </div>
       </div>
