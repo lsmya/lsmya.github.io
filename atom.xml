@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lsmya.github.io</id>
     <title>小书本</title>
-    <updated>2019-06-17T08:29:05.728Z</updated>
+    <updated>2019-06-19T06:51:39.555Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lsmya.github.io"/>
     <link rel="self" href="https://lsmya.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://lsmya.github.io/images/avatar.png</logo>
     <icon>https://lsmya.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 小书本</rights>
+    <entry>
+        <title type="html"><![CDATA[Manifest merger failed with multiple errors, see logs]]></title>
+        <id>https://lsmya.github.io/post/NNY7r7Hh6</id>
+        <link href="https://lsmya.github.io/post/NNY7r7Hh6">
+        </link>
+        <updated>2019-06-19T06:49:17.000Z</updated>
+        <content type="html"><![CDATA[<p>如果出现 <code>Manifest merger failed with multiple errors, see logs</code> 错误信息，可以使用 <code>gradlew processDebugManifest --stacktrace</code> 来查看更加详细的信息
+Windows：</p>
+<pre><code>gradlew processDebugManifest --stacktrace
+</code></pre>
+<p>Mac：</p>
+<pre><code>./gradlew processDebugManifest --stacktrace
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关闭Dialog后软键盘无法关闭问题]]></title>
         <id>https://lsmya.github.io/post/id0YeYcLY</id>
@@ -343,19 +358,6 @@ public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         </link>
         <updated>2019-05-09T03:34:36.000Z</updated>
         <content type="html"><![CDATA[<p>在 Assets.xcassets 文件夹中添加AppIcon之后，Xcode控制台就不会再打印CUIThemeStore: No theme registered with id=0</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ios--解决 Reading from private effective user settings]]></title>
-        <id>https://lsmya.github.io/post/AsZIYRD5z</id>
-        <link href="https://lsmya.github.io/post/AsZIYRD5z">
-        </link>
-        <updated>2019-05-09T03:12:23.000Z</updated>
-        <content type="html"><![CDATA[<ol>
-<li>在Xcode顶部菜单栏选择：Product --&gt; Scheme --&gt; Edit Scheme</li>
-<li>在左边的菜单栏中选择：Run --&gt; Arguments</li>
-<li>在 Environment Variables 点击添加按钮，添加变量名为 OS_ACTIVITY_MODE 的变量，Value为 NO</li>
-</ol>
 ]]></content>
     </entry>
 </feed>
