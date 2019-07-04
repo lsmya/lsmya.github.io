@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lsmya.github.io</id>
     <title>小书本</title>
-    <updated>2019-06-20T03:58:01.761Z</updated>
+    <updated>2019-07-04T02:20:41.702Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lsmya.github.io"/>
     <link rel="self" href="https://lsmya.github.io/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://lsmya.github.io/images/avatar.png</logo>
     <icon>https://lsmya.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 小书本</rights>
+    <entry>
+        <title type="html"><![CDATA[swift 小菊花加载动画]]></title>
+        <id>https://lsmya.github.io/post/SviSTMcBY</id>
+        <link href="https://lsmya.github.io/post/SviSTMcBY">
+        </link>
+        <updated>2019-07-04T02:18:39.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>let activityView = UIActivityIndicatorView()
+activityView.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
+// 停止后，隐藏菊花
+activityView.hidesWhenStopped = true
+//Style: whiteLarge比较大的白色环形进度条;white白色环形进度条;gray灰色环形进度条
+activityView.style = UIActivityIndicatorView.Style.whiteLarge
+view.addSubview(self.activityView)
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[SearchView使用详解]]></title>
         <id>https://lsmya.github.io/post/b1QSAuPuF</id>
@@ -435,53 +451,6 @@ public void dismiss() {
 <pre><code>&lt;application android:usesCleartextTraffic=&quot;true&quot;&gt;
 </code></pre>
 <p>但是更好的解决办法是在应用程序中使用https的请求</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[recyclerView的item点击事件在onCreateViewHolder中写和在onBindViewHolder中写有何区别？如何优化？]]></title>
-        <id>https://lsmya.github.io/post/Ibf3l7ix0</id>
-        <link href="https://lsmya.github.io/post/Ibf3l7ix0">
-        </link>
-        <updated>2019-05-13T01:58:11.000Z</updated>
-        <content type="html"><![CDATA[<ul>
-<li>
-<h5 id="1在oncreateviewholder中写">1.在onCreateViewHolder中写</h5>
-</li>
-</ul>
-<pre><code>@NonNull
-@Override
-public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    final View view = LayoutInflater.from(mContext).inflate(R.layout.item, parent, false);
-    final ViewHolder holder = new ViewHolder(view);
-    view.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            if (listener != null) {
-                listener.onItemClick(view, holder.getLayoutPosition());
-            }
-        }
-    });
-    return holder;
-}
-</code></pre>
-<ul>
-<li>
-<h5 id="2在onbindviewholder中写">2.在onBindViewHolder中写</h5>
-</li>
-</ul>
-<pre><code>@Override
-public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
-    holder.itemView.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            if (listener != null) {
-                listener.onItemClick(holder.itemView, position);
-            }
-        }
-    });
-}
-</code></pre>
-<p>在onBindViewHolder中会频繁的创建新的onClickListener实例，建议在onCreateViewHolder中为新建的 View 设置点击事件</p>
 ]]></content>
     </entry>
 </feed>
