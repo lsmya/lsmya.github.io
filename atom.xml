@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lsmya.github.io</id>
     <title>小书本</title>
-    <updated>2019-07-04T02:20:41.702Z</updated>
+    <updated>2019-07-05T10:11:53.097Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lsmya.github.io"/>
     <link rel="self" href="https://lsmya.github.io/atom.xml"/>
@@ -10,6 +10,134 @@
     <logo>https://lsmya.github.io/images/avatar.png</logo>
     <icon>https://lsmya.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 小书本</rights>
+    <entry>
+        <title type="html"><![CDATA[UILabel]]></title>
+        <id>https://lsmya.github.io/post/4M_SXdaMQ</id>
+        <link href="https://lsmya.github.io/post/4M_SXdaMQ">
+        </link>
+        <updated>2019-07-05T10:05:01.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="基础用法">基础用法</h2>
+<pre><code>//设置标签x坐标：10，y坐标：20，长：300，宽：100
+let label = UILabel(frame:CGRect(x:10, y:20, width:300, height:100))
+label.text = &quot;文本&quot;
+label.textColor = UIColor.white //白色文字
+label.backgroundColor = UIColor.black //黑色背景
+label.textAlignment = .right//文字右对齐
+label.font = UIFont.systemFont(ofSize: 17)//字体大小
+label.numberOfLines = 2//行数，为0时自动换行
+self.view.addSubview(label);
+</code></pre>
+<h2 id="高度随内容自适应">高度随内容自适应</h2>
+<pre><code>let labelFont = label?.font
+let labelSize = getLabHeigh(labelStr: &quot;文本内容&quot; font: labelFont!, width: 100)
+label.numberOfLines = 0//行数一定要设为0
+label!.frame = CGRect(x: 0, y: 0, width: 100, height: labelSize)
+</code></pre>
+<h3 id="获取内容高度">获取内容高度</h3>
+<pre><code>private func getLabHeigh(labelStr:String,font:UIFont,width:CGFloat,lineSpacing:CGFloat=0) -&gt; CGFloat {
+    let statusLabelText: NSString = labelStr as NSString
+    //这里这个height随便给，设为0也可以
+    let size = CGSize(width: width, height: 9999)
+    //通过富文本来设置行间距
+    let paraph = NSMutableParagraphStyle()
+    //行间距设置
+    paraph.lineSpacing = lineSpacing
+    //样式属性集合
+    let attributes = [NSAttributedString.Key.font:font,NSAttributedString.Key.paragraphStyle: paraph]
+    //boundingRect函数只有NSString可以用
+    let strSize = statusLabelText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+    return strSize.height
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[UIImageView]]></title>
+        <id>https://lsmya.github.io/post/uiimageview</id>
+        <link href="https://lsmya.github.io/post/uiimageview">
+        </link>
+        <updated>2019-07-05T09:48:42.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="基础用法">基础用法</h2>
+<pre><code>let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+imageView.image = UIImage.init(named: &quot;portrait.png&quot;)
+imageView.layer.cornerRadius = 10.0
+imageView.clipsToBounds = true
+</code></pre>
+<p>设置图片显示样式</p>
+<pre><code>imageView.contentMode = .scaleAspectFit
+</code></pre>
+<h2 id="添加点击事件">添加点击事件</h2>
+<pre><code>let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(imageClick))
+imageView.addGestureRecognizer(singleTapGesture)
+imageView.isUserInteractionEnabled = true
+
+@objc func imageClick() {
+}
+</code></pre>
+<h2 id="设为圆角">设为圆角</h2>
+<pre><code>imageView.layer.cornerRadius = 10.0
+imageView.clipsToBounds = true
+</code></pre>
+<h2 id="加载网络图片">加载网络图片</h2>
+<p>使用 <code>AlamofireImage</code> ，Podfile文件中添加 <code>pod 'AlamofireImage', '~&gt; 3.5'</code>，然后运行pod install</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cocoapods导入依赖包]]></title>
+        <id>https://lsmya.github.io/post/8Cc7bkeRE</id>
+        <link href="https://lsmya.github.io/post/8Cc7bkeRE">
+        </link>
+        <updated>2019-07-05T06:37:01.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-配置cocoapods">1、配置CocoaPods</h2>
+<p>CocoaPods需要系统内已经安装了ruby，如果没有安装，请先安装。可以使用如下命令：</p>
+<pre><code>sudo gem install cocoapods
+</code></pre>
+<p>安装gem工具。随即使用：</p>
+<pre><code>pod setup --verbose
+</code></pre>
+<p>之后，只要pod目录没有更新，就尽可能使用这个命令（快得多）：</p>
+<pre><code>pod install --verbose --no-repo-update
+</code></pre>
+<p>到此命令执行完毕，cocoapods就可以使用了</p>
+<h2 id="2-pod使用">2、pod使用</h2>
+<h3 id="打开终端进入到项目目录然后初始化pod">打开终端，进入到项目目录，然后初始化pod</h3>
+<pre><code>pod init
+</code></pre>
+<h3 id="编辑podfile文件">编辑Podfile文件</h3>
+<pre><code>source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+xcodeproj 'SouthSea.xcodeproj'
+
+target 'SouthSea' do
+    pod 'Alamofire', '~&gt; 4.7'
+    pod 'SwiftyJSON', '~&gt; 4.0'
+    pod 'AlamofireImage', '~&gt; 3.5'
+	pod 'MJRefresh'
+end
+</code></pre>
+<h3 id="安装-下载依赖包">安装、下载依赖包</h3>
+<p>在当前项目目录执行以下命令：</p>
+<pre><code>pod install
+</code></pre>
+<h3 id="打开项目">打开项目</h3>
+<p>使用workspace文件打开项目</p>
+<h2 id="3-常见问题">3、常见问题</h2>
+<h3 id="问题">问题：</h3>
+<pre><code>Unable to add a source with url `https://github.com/CocoaPods/Specs.git` named
+</code></pre>
+<h4 id="解决方案">解决方案：</h4>
+<p>执行以下命令：</p>
+<pre><code>pod repo add master https://github.com/CocoaPods/Specs.git
+</code></pre>
+<p>然后提示执行’pod setup’，如果出现</p>
+<pre><code>[!] The `master` repo is not a git repo.
+</code></pre>
+<p>进入/users/用户名/.cocoapods/repos，删除master文件夹，然后再次执行</p>
+<pre><code>pod setup
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[swift 小菊花加载动画]]></title>
         <id>https://lsmya.github.io/post/SviSTMcBY</id>
@@ -394,63 +522,6 @@ public void dismiss() {
 </code></pre>
 <h4 id="把startingwindow禁掉或者设置透明">把StartingWindow禁掉或者设置透明</h4>
 <p>用户点了应用图标启动应用，由于StartingWindow被禁掉或者被设置透明，所以会出现点击图标后，除了图标黑一下之外没有任何响应，过一会（取决于应用第一帧的加载速度，几秒的时间），直接显示应用主界面。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ImageView的scaleType属性]]></title>
-        <id>https://lsmya.github.io/post/k99RZfK</id>
-        <link href="https://lsmya.github.io/post/k99RZfK">
-        </link>
-        <updated>2019-05-16T10:03:00.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="1androidscaletypecenter">1.android:scaleType=&quot;center&quot;</h3>
-<p>保持原图的大小，显示在ImageView的中心。当原图的size大于ImageView的size时，多出来的部分被截掉。</p>
-<h3 id="2androidscaletypecenterinside">2.android:scaleType=&quot;centerInside&quot;</h3>
-<p>以原图正常显示为目的，如果原图大小大于ImageView的size，就按照比例缩小原图的宽高，居中显示在ImageView中。如果原图size小于ImageView的size，则不做处理居中显示图片。</p>
-<h3 id="3androidscaletypecentercrop">3.android:scaleType=&quot;centerCrop&quot;</h3>
-<p>以原图填满ImageView为目的，如果原图size大于ImageView的size，则与center_inside一样，按比例缩小，居中显示在ImageView上。如果原图size小于ImageView的size，则按比例拉升原图的宽和高，填充ImageView居中显示。</p>
-<h3 id="4androidscaletypematrix">4.android:scaleType=&quot;matrix&quot;</h3>
-<p>不改变原图的大小，从ImageView的左上角开始绘制，超出部分做剪切处理。</p>
-<h3 id="5androdscaletypefitxy">5.androd:scaleType=&quot;fitXY&quot;</h3>
-<p>把图片按照指定的大小在ImageView中显示，拉伸显示图片，不保持原比例，填满ImageView.</p>
-<h3 id="6androidscaletypefitstart">6.android:scaleType=&quot;fitStart&quot;</h3>
-<p>把原图按照比例放大缩小到ImageView的高度，显示在ImageView的start（前部/上部）。</p>
-<h3 id="7androidsacletypefitcenter">7.android:sacleType=&quot;fitCenter&quot;</h3>
-<p>把原图按照比例放大缩小到ImageView的高度，显示在ImageView的center（中部/居中显示）。</p>
-<h3 id="8androidscaletypefitend">8.android:scaleType=&quot;fitEnd&quot;</h3>
-<p>把原图按照比例放大缩小到ImageView的高度，显示在ImageVIew的end（后部/尾部/底部）</p>
-<p>效果图：
-<img src="https://lsmya.github.io/post-images/1558318886658.png" alt="">
-原图：
-<img src="https://lsmya.github.io/post-images/1558318892111.jpg" alt=""></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[无法通过“application/vnd.android.package-archive” action安装应用]]></title>
-        <id>https://lsmya.github.io/post/DM3QDjJEx</id>
-        <link href="https://lsmya.github.io/post/DM3QDjJEx">
-        </link>
-        <updated>2019-05-16T08:00:27.000Z</updated>
-        <content type="html"><![CDATA[<p>targetsdkversion大于25必须声明REQUEST_INSTALL_PACKAGES权限</p>
-<h3 id="解决办法">解决办法</h3>
-<p>在AndroidManifest中加入</p>
-<pre><code>&lt;uses-permission android:name=&quot;android.permission.REQUEST_INSTALL_PACKAGES&quot; /&gt;
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[targetSdkVersion 28 http请求报错CLEARTEXT communication to *** not permitted by network security policy]]></title>
-        <id>https://lsmya.github.io/post/cB7Rhv9_D</id>
-        <link href="https://lsmya.github.io/post/cB7Rhv9_D">
-        </link>
-        <updated>2019-05-16T07:53:16.000Z</updated>
-        <content type="html"><![CDATA[<p>从6.0开始Android引入了对Https的推荐支持，但是P（api28）的系统上面默认所有Http的请求都被拦截
-<application android:usesCleartextTraffic="true|false">
-原本这个属性的默认值为true</p>
-<h3 id="解决办法">解决办法</h3>
-<p>在AnroidManifest.xml中的application添加：</p>
-<pre><code>&lt;application android:usesCleartextTraffic=&quot;true&quot;&gt;
-</code></pre>
-<p>但是更好的解决办法是在应用程序中使用https的请求</p>
 ]]></content>
     </entry>
 </feed>
