@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lsmya.github.io</id>
     <title>小书本</title>
-    <updated>2019-07-15T01:24:34.946Z</updated>
+    <updated>2019-07-15T01:58:24.036Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lsmya.github.io"/>
     <link rel="self" href="https://lsmya.github.io/atom.xml"/>
@@ -11,17 +11,32 @@
     <icon>https://lsmya.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 小书本</rights>
     <entry>
-        <title type="html"><![CDATA[js调用Android原生方法]]></title>
+        <title type="html"><![CDATA[Android原生方法与js交互]]></title>
         <id>https://lsmya.github.io/post/K4mr3AfWs</id>
         <link href="https://lsmya.github.io/post/K4mr3AfWs">
         </link>
         <updated>2019-07-15T01:16:54.000Z</updated>
-        <content type="html"><![CDATA[<p>Android：添加注解<code>JavascriptInterface</code></p>
+        <content type="html"><![CDATA[<h2 id="注意一定添加以下配置">注意：一定添加以下配置</h2>
+<pre><code>//让WebView支持调用Js
+webSettings.setJavaScriptEnabled(true);
+//给webview添加Js调用接口
+webview.addJavascriptInterface(MainActivity.this,&quot;android&quot;);
+</code></pre>
+<h3 id="android调用js方法">Android调用js方法</h3>
+<p>Android代码：</p>
+<pre><code>webview.loadUrl(&quot;javascript:javacallfunc()&quot;);
+</code></pre>
+<p>js代码：</p>
+<pre><code>function javacallfunc(){
+}
+</code></pre>
+<h3 id="js调用android原生方法">js调用Android原生方法</h3>
+<p>Android代码：</p>
 <pre><code>@JavascriptInterface
 public void test(String data) {
 }
 </code></pre>
-<p>js：</p>
+<p>js代码：</p>
 <pre><code>window.android.test(&quot;需要传递的数据&quot;)
 </code></pre>
 ]]></content>

@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" >
 
-<title>js调用Android原生方法 | 小书本</title>
+<title>Android原生方法与js交互 | 小书本</title>
 <meta name="description" content="&lt;p style=&#34;text-align: center&#34;&gt;小可爱一起嗨吗&lt;/p&gt;">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1563153863464">
+<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1563155047495">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://lsmya.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://lsmya.github.io">
-        <img src="https://lsmya.github.io/images/avatar.png?v=1563153863464" class="site-logo">
+        <img src="https://lsmya.github.io/images/avatar.png?v=1563155047495" class="site-logo">
         <h1 class="site-title">小书本</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -102,16 +102,31 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">js调用Android原生方法</h2>
+            <h2 class="post-title">Android原生方法与js交互</h2>
             <div class="post-date">2019-07-15</div>
             
             <div class="post-content">
-              <p>Android：添加注解<code>JavascriptInterface</code></p>
+              <h2 id="注意一定添加以下配置">注意：一定添加以下配置</h2>
+<pre><code>//让WebView支持调用Js
+webSettings.setJavaScriptEnabled(true);
+//给webview添加Js调用接口
+webview.addJavascriptInterface(MainActivity.this,&quot;android&quot;);
+</code></pre>
+<h3 id="android调用js方法">Android调用js方法</h3>
+<p>Android代码：</p>
+<pre><code>webview.loadUrl(&quot;javascript:javacallfunc()&quot;);
+</code></pre>
+<p>js代码：</p>
+<pre><code>function javacallfunc(){
+}
+</code></pre>
+<h3 id="js调用android原生方法">js调用Android原生方法</h3>
+<p>Android代码：</p>
 <pre><code>@JavascriptInterface
 public void test(String data) {
 }
 </code></pre>
-<p>js：</p>
+<p>js代码：</p>
 <pre><code>window.android.test(&quot;需要传递的数据&quot;)
 </code></pre>
 
