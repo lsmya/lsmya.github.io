@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1563958844804">
+<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1566349113909">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://lsmya.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://lsmya.github.io">
-        <img src="https://lsmya.github.io/images/avatar.png?v=1563958844804" class="site-logo">
+        <img src="https://lsmya.github.io/images/avatar.png?v=1566349113909" class="site-logo">
         <h1 class="site-title">小书本</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -107,12 +107,12 @@
             
             <div class="post-content">
               <h3 id="1注册-bintray">1.注册<a href="https://bintray.com"> Bintray</a></h3>
-<p>注册时要注意哦，千万不要注册成组织的账户，一定要注册为个人。因为组织账户只有一个月的免费使用时间。
-个人账户注册地址：https://bintray.com/signup/oss
+<p>注册时要注意哦，千万不要注册成组织的账户，一定要注册为个人。因为组织账户只有一个月的免费使用时间。<br>
+个人账户注册地址：https://bintray.com/signup/oss<br>
 有Github、Google、Twitter账号的可以直接登录哦</p>
 <h3 id="2创建maven仓库仓库名可自定义">2.创建Maven仓库（仓库名可自定义）</h3>
-<p>个人首页中点击Add New Repository，仓库名必须为：maven ，否则使用命令行提交时会报错
-<img src="https://user-gold-cdn.xitu.io/2019/1/9/1683160a811411c3?w=500&amp;h=500&amp;f=png&amp;s=9889" alt="">
+<p>个人首页中点击Add New Repository，仓库名必须为：maven ，否则使用命令行提交时会报错<br>
+<img src="https://user-gold-cdn.xitu.io/2019/1/9/1683160a811411c3?w=500&amp;h=500&amp;f=png&amp;s=9889" alt=""><br>
 然后填完基本信息后点击create，这样就创建了仓库。</p>
 <h3 id="3配置项目">3.配置项目</h3>
 <p>在项目的build.gradle中配置如下：</p>
@@ -161,7 +161,7 @@ allprojects {
 //含有kotlin类时需要添加
 tasks.getByPath(&quot;:${library依赖名}:releaseAndroidJavadocs&quot;).enabled = false
 </code></pre>
-<p>注意：
+<p>注意：<br>
 bintray-release对应的Gradle版本：</p>
 <pre><code>bintray-releas version   0.9  对应 Gradle  是 version  5.1.1
 bintray-releas version   0.8.0+  对应 Gradle  是 version  4.1+ (包括4.1)(4.5 不适用)
@@ -185,26 +185,26 @@ publish {
     website = 'https://github.com/lsmya/fastFrame'//github上的地址
 }
 </code></pre>
-<p>apikey的获取：
-<img src="https://user-gold-cdn.xitu.io/2019/1/9/1683160a814b3569?w=236&amp;h=269&amp;f=png&amp;s=18879" alt="image.png">
-点击Edit Profile，然后左侧菜单列表找到API Key，点击show即可查看，也可点击show右边的按钮复制到剪切板
+<p>apikey的获取：<br>
+<img src="https://user-gold-cdn.xitu.io/2019/1/9/1683160a814b3569?w=236&amp;h=269&amp;f=png&amp;s=18879" alt="image.png"><br>
+点击Edit Profile，然后左侧菜单列表找到API Key，点击show即可查看，也可点击show右边的按钮复制到剪切板<br>
 <img src="https://user-gold-cdn.xitu.io/2019/1/9/1683160a816b59ca?w=907&amp;h=425&amp;f=png&amp;s=32385" alt="image.png"></p>
 <p>完成三个地方的配置后，就可以通过命令把项目上传到 Bintray 了。</p>
 <h3 id="4上传项目到bintray">4.上传项目到Bintray</h3>
-<p>在Android Studio的终端（Terminal）中使用命令行:
+<p>在Android Studio的终端（Terminal）中使用命令行:<br>
 Win请使用：</p>
 <pre><code>gradlew clean build bintrayUpload  -PbintrayUser=${your_username}  -PbintrayKey=${your_apikey}  -PdryRun=false
 </code></pre>
 <p>Mac请使用：</p>
 <pre><code>./gradlew clean build bintrayUpload  -PbintrayUser=${your_username}  -PbintrayKey=${your_apikey}   -PdryRun=false
 </code></pre>
-<p>PbintrayUser：登录binary网站的用户名。
-PbintrayKey：上面提到的apikey。
+<p>PbintrayUser：登录binary网站的用户名。<br>
+PbintrayKey：上面提到的apikey。<br>
 dryRun：一个配置参数，当为true的时候，会进行所有步骤，但是不会上传到binary。</p>
-<p>回车之后等待编译打包，出现 BUILD SUCCESS，则表示上传成功。
+<p>回车之后等待编译打包，出现 BUILD SUCCESS，则表示上传成功。<br>
 回到Bintray的首页点击之前创建的Maven仓库就可以看到上传的library了</p>
 <h3 id="5将项目发布到jcenter">5.将项目发布到JCenter</h3>
-<p>点击Add to JCenter，在新页面中点击Send，之后就等待Bintrary的审核吧，如果审核通过会以邮件通知你。
+<p>点击Add to JCenter，在新页面中点击Send，之后就等待Bintrary的审核吧，如果审核通过会以邮件通知你。<br>
 <img src="https://user-gold-cdn.xitu.io/2019/1/9/1683160a816f91b0?w=1179&amp;h=714&amp;f=png&amp;s=94905" alt=""></p>
 
             </div>
