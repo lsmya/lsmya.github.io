@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1574650709650">
+<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1574652318034">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://lsmya.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://lsmya.github.io">
-        <img src="https://lsmya.github.io/images/avatar.png?v=1574650709650" class="site-logo">
+        <img src="https://lsmya.github.io/images/avatar.png?v=1574652318034" class="site-logo">
         <h1 class="site-title">小书本</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -108,7 +108,7 @@
             <div class="post-content">
               <h1 id="使用说明">使用说明</h1>
 <p>在dependencies中添加</p>
-<pre><code>implementation 'android.library:util:+'
+<pre><code>implementation 'android.library:util:latest_version'
 </code></pre>
 <p><a href="https://bintray.com/lovelylsmya/android/util/_latestVersion"> <img src="https://api.bintray.com/packages/lovelylsmya/android/util/images/download.svg" alt="version"> </a></p>
 <h1 id="介绍">介绍</h1>
@@ -126,42 +126,46 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/dialog/BottomClickDialog.java">BottomClickDialog</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/dialog/BottomClickDialog.java">BottomClickDialog</a></td>
 <td style="text-align:left">底部弹出弹窗，宽度为屏幕宽度9/10，实例化时传入layoutid和点击控件id</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/dialog/BottomDialogById.java">BottomDialogById</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/dialog/BottomDialogById.java">BottomDialogById</a></td>
 <td style="text-align:left">底部弹出弹窗，宽度为屏幕宽度9/10，使用自定义布局id</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/dialog/BottomDialogByView.java">BottomDialogByView</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/dialog/BottomDialogByView.java">BottomDialogByView</a></td>
 <td style="text-align:left">底部弹出弹窗，宽度为屏幕宽度9/10，使用自定义布局view</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/dialog/BottomWidthDialogById.java">BottomWidthDialogById</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/dialog/BottomWidthDialogById.java">BottomWidthDialogById</a></td>
 <td style="text-align:left">底部弹出弹窗，宽度等于屏幕宽度，使用自定义布局id</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/dialog/BottomWidthDialogByView.java">BottomWidthDialogByView</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/dialog/BottomWidthDialogByView.java">BottomWidthDialogByView</a></td>
 <td style="text-align:left">底部弹出弹窗，宽度等于屏幕宽度，使用自定义布局view</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/dialog/HintDialog.java">HintDialog</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/dialog/HintDialog.java">HintDialog</a></td>
 <td style="text-align:left">仿ios提示弹窗</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/dialog/BottomListDialog.java">BottomListDialog</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/dialog/BottomListDialog.java">BottomListDialog</a></td>
 <td style="text-align:left">屏幕底部弹出列表dialog，使用String集合数据源生成</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/dialog/ChooseListDialog.java">ChooseListDialog</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/dialog/ChooseListDialog.java">ChooseListDialog</a></td>
 <td style="text-align:left">屏幕中间弹出选择列表，数据源集合使用泛型，可适用于多种数据格式的集合数据源</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/dialog/RxDialog.java">RxDialog</a></td>
+<td style="text-align:left">确认选择弹窗，可以动态添加按钮数量，调整弹窗位置、宽度，调整弹窗风格（确定式弹窗、带取消按钮的纵向排列式弹窗）</td>
 </tr>
 </tbody>
 </table>
-<h2 id="http">http</h2>
+<h2 id="http-使用方法">http <a href="http.md">使用方法</a></h2>
 <blockquote>
-<p>http接口请求，链式调用，支持get、post、post上传文件、delete、put、根据tag随时取消请求、随时更换baseUrl</p>
+<p>http接口请求，链式调用，支持get、post、post上传文件（支持上传进度回调）、delete、put、根据tag随时取消请求、随时更换baseUrl，请求前拦截为接口重新配置，可以更换url、修改请求方法、设置请求头甚至重新发起一个全新的请求</p>
 </blockquote>
 <table>
 <thead>
@@ -172,20 +176,24 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/http/Api.java">Api</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/http/Api.java">Api</a></td>
 <td style="text-align:left">http请求的操作类，支持get、post（form、json、form+file）、delete（form、json）、put(form、json)等请求，根据tag取消请求</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/http/ApiInitialize.java">ApiInitialize</a></td>
-<td style="text-align:left">提供http请求的初始化操作，初始化OkHttp、设置baseUrl、开启debug日志输出</td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/http/ApiInitialize.java">ApiInitialize</a></td>
+<td style="text-align:left">提供http请求的初始化操作，初始化OkHttp、设置baseUrl、开启debug日志输出、设置请求前拦截回调方法</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/http/ApiCallBack.java">ApiCallBack</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/http/ApiCallBack.java">ApiCallBack</a></td>
 <td style="text-align:left">http请求结果的回调类，支持请求前、请求成功、请求失败、请求取消、请求结束</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/http/ApiProgressListener.java">ApiProgressListener</a></td>
+<td style="text-align:left">上传文件时的上传进度回调</td>
 </tr>
 </tbody>
 </table>
-<h2 id="easypermission">EasyPermission</h2>
+<h2 id="easypermission使用方法">EasyPermission<a href="permission.md">使用方法</a></h2>
 <blockquote>
 <p>只需三行代码即可完成权限申请处理</p>
 </blockquote>
@@ -198,11 +206,11 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/permission/EasyPermission.java">EasyPermission</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/permission/EasyPermission.java">EasyPermission</a></td>
 <td style="text-align:left">权限申请处理工具类</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/permission/OnEasyPermissionListener.java">OnEasyPermissionListener</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/permission/OnEasyPermissionListener.java">OnEasyPermissionListener</a></td>
 <td style="text-align:left">权限申请结果回调</td>
 </tr>
 </tbody>
@@ -220,32 +228,31 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/view/CircleImageView.java">CircleImageView</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/view/CircleImageView.java">CircleImageView</a></td>
 <td style="text-align:left">圆形的ImageView</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/view/ImageSquareView.java">ImageSquareView</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/view/ImageSquareView.java">ImageSquareView</a></td>
 <td style="text-align:left">正方形的ImageView（高度由宽度决定）</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/view/PickerView">PickerView</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/view/PickerView">PickerView</a></td>
 <td style="text-align:left">类似于NumberPicker的选择器</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/view/RoundImageView.java">RoundImageView</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/view/RoundImageView.java">RoundImageView</a></td>
 <td style="text-align:left">圆角的ImageView</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/android/library/util/view/ShapeTextView.java">ShapeTextView</a></td>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/view/ShapeTextView.java">ShapeTextView</a></td>
 <td style="text-align:left">支持圆角、边框的TextView,无需编写drawable文件</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://github.com/lsmya/AndroidLibrary/blob/master/library/src/main/java/rx/library/kit/view/ProgressView.java">ProgressView</a></td>
+<td style="text-align:left">圆环式进度条，圆心显示数字进度</td>
 </tr>
 </tbody>
 </table>
-<h2 id="license">License</h2>
-<ol>
-<li>Under the MIT license. See the <a href="https://github.com/wildfirechat/mars/blob/firechat/LICENSE">LICENSE</a> file for details.</li>
-<li>Under the 996ICU License. See the <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE">LICENSE</a> file for details.</li>
-</ol>
 
             </div>
             
