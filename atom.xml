@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lsmya.github.io</id>
     <title>小书本</title>
-    <updated>2019-11-25T03:34:18.906Z</updated>
+    <updated>2019-12-18T03:35:03.246Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lsmya.github.io"/>
     <link rel="self" href="https://lsmya.github.io/atom.xml"/>
-    <subtitle>&lt;p style=&quot;text-align: center&quot;&gt;小可爱一起嗨吗&lt;/p&gt;</subtitle>
+    <subtitle>小可爱一起嗨吗</subtitle>
     <logo>https://lsmya.github.io/images/avatar.png</logo>
     <icon>https://lsmya.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 小书本</rights>
@@ -16,8 +16,11 @@
         <link href="https://lsmya.github.io/post/Hz9lrueIV">
         </link>
         <updated>2019-08-21T00:56:52.000Z</updated>
-        <content type="html"><![CDATA[<p>终端中输入：</p>
+        <content type="html"><![CDATA[<p>关闭：</p>
 <pre><code>launchctl unload -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist
+</code></pre>
+<p>启用：</p>
+<pre><code>launchctl load -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist
 </code></pre>
 ]]></content>
     </entry>
