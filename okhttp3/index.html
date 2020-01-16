@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>小书本</title>
@@ -35,7 +35,7 @@
 
 </head>
 <body>
-    <div id="fh5co-offcanvas">
+<div id="fh5co-offcanvas">
     <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
         <span><i class="icon-cross3"></i> <span>Close</span></span>
     </a>
@@ -79,29 +79,29 @@
             <a href="https://lsmya.github.io/tags/"><h3 class="heading">👉标签</h3></a>
             <ul>
                 
-                    <li><a href="https://lsmya.github.io/tag/adobe">Adobe</a></li>
+                    <li><a href="https://lsmya.github.io/adobe">Adobe</a></li>
                 
-                    <li><a href="https://lsmya.github.io/tag/android">android</a></li>
+                    <li><a href="https://lsmya.github.io/android">android</a></li>
                 
-                    <li><a href="https://lsmya.github.io/tag/swift">swift</a></li>
+                    <li><a href="https://lsmya.github.io/swift">swift</a></li>
                 
-                    <li><a href="https://lsmya.github.io/tag/ios">ios</a></li>
+                    <li><a href="https://lsmya.github.io/ios">ios</a></li>
                 
-                    <li><a href="https://lsmya.github.io/tag/searchview">SearchView</a></li>
+                    <li><a href="https://lsmya.github.io/searchview">SearchView</a></li>
                 
-                    <li><a href="https://lsmya.github.io/tag/dialog">Dialog</a></li>
+                    <li><a href="https://lsmya.github.io/dialog">Dialog</a></li>
                 
-                    <li><a href="https://lsmya.github.io/tag/imageview">ImageView</a></li>
+                    <li><a href="https://lsmya.github.io/imageview">ImageView</a></li>
                 
-                    <li><a href="https://lsmya.github.io/tag/recyclerview">recyclerview</a></li>
+                    <li><a href="https://lsmya.github.io/recyclerview">recyclerview</a></li>
                 
-                    <li><a href="https://lsmya.github.io/tag/okhttp3">okhttp3</a></li>
+                    <li><a href="https://lsmya.github.io/okhttp3">okhttp3</a></li>
                 
-                    <li><a href="https://lsmya.github.io/tag/idea">idea</a></li>
+                    <li><a href="https://lsmya.github.io/idea">idea</a></li>
                 
-                    <li><a href="https://lsmya.github.io/tag/svn">svn</a></li>
+                    <li><a href="https://lsmya.github.io/svn">svn</a></li>
                 
-                    <li><a href="https://lsmya.github.io/tag/targetsdkversion28">targetSdkVersion28</a></li>
+                    <li><a href="https://lsmya.github.io/targetsdkversion28">targetSdkVersion28</a></li>
                 
             </ul>
         </div>
@@ -147,7 +147,7 @@
                     </li>
                 
                     <li>
-                        <a href="https://lsmya.github.io/post/about/"
+                        <a href="https://lsmya.github.io/about"
                         
                         >
                             我
@@ -165,215 +165,82 @@
 </header>
 
 
-    <!--  <a href="#" class="fh5co-post-prev"><span>👈 Prev</span></a>-->
-    <!--  <a href="#" class="fh5co-post-next"><span>Next 👉</span></a>-->
+<div class="container-fluid">
 
-    <!-- 等gridea出自定义页面功能再优化一下 -->
+  <div class="col-lg-12 col-md-12 text-center tag-title">
+      <i class="fa fa-tag"></i> 标签: <h3>okhttp3</h3>
+  </div>
+
+  <div class="row fh5co-post-entry">
+
     
-        <div class="container-fluid">
-    <div class="row fh5co-post-entry single-entry">
-        <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
-            <figure class="animate-box">
-                
-            </figure>
-            <span class="fh5co-meta animate-box">
-                
-                    <div class="tag-container">
-                        
-                            <a href="https://lsmya.github.io/tag/android" class="tag">android, </a>
-                        
-                            <a href="https://lsmya.github.io/tag/okhttp3" class="tag">okhttp3, </a>
-                        
-                    </div>
-                
-            </span>
-            <h2 class="fh5co-article-title animate-box">OkHttp3使用</h2>
-            <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
-                <li>2019-04-25</li>
-                <li>383字</li>
-                <li>3 min read</li>
-            </ol>
-
-            <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
-                <div class="row">
-                    <div class="col-md-12 animate-box post-content">
-                        <p> <ul>
-<li>
-<h3 id="添加依赖">添加依赖</h3>
-</li>
-</ul>
-<pre><code>implementation 'com.squareup.okhttp3:okhttp:3.11.0'
-</code></pre>
-<p>目前最新的稳定版可能已经不是<code>3.11.0</code>了，可以到官方GitHub来查看最新版本 <a href="https://github.com/square/okhttp">https://github.com/square/okhttp</a></p>
-<p>okio最新地址：<a href="https://github.com/square/okio">https://github.com/square/okio</a></p>
-<ul>
-<li>
-<h3 id="异步get">异步GET</h3>
-</li>
-</ul>
-<pre><code>String url = &quot;http://wwww.baidu.com&quot;;
-OkHttpClient mOkHttpClient = new OkHttpClient();
-Request mRequest = new Request.Builder()
-        .url(url)
-        .addHeader(&quot;key&quot;, &quot;value&quot;)
-        .get()//默认就是GET请求，可以不写
-        .build();
-mOkHttpClient.newCall(mRequest).enqueue(new Callback() {
-    @Override
-    public void onFailure(Call call, IOException e) {
-    }
-
-    @Override
-    public void onResponse(Call call, Response response) throws IOException {
-        String data = response.body().string();//返回数据
-    }
-});
-</code></pre>
-<ul>
-<li>
-<h3 id="异步post提交表单">异步POST提交表单</h3>
-</li>
-</ul>
-<p>与GET相比，POST多了一个请求体（RequestBody）</p>
-<pre><code>String url = &quot;&quot;;
-OkHttpClient mOkHttpClient = new OkHttpClient();
-RequestBody requestBody = new FormBody.Builder()
-        .add(&quot;key&quot;, &quot;value&quot;)
-        .build();
-Request mRequest = new Request.Builder()
-        .url(url)
-        .post(requestBody)
-        .build();
-
-mOkHttpClient.newCall(mRequest).enqueue(new Callback() {
-    @Override
-    public void onFailure(Call call, IOException e) {
-    }
-
-    @Override
-    public void onResponse(Call call, Response response) throws IOException {
-    }
-});
-</code></pre>
-<ul>
-<li>
-<h3 id="异步post提交字符串">异步POST提交字符串</h3>
-</li>
-</ul>
-<pre><code>String url = &quot;&quot;;
-MediaType mediaType = MediaType.parse(&quot;application/json; charset=utf-8&quot;);
-String requestBody = &quot;I'm String&quot;;
-Request request = new Request.Builder()
-        .url(url)
-        .post(RequestBody.create(mediaType, requestBody))
-        .build();
-OkHttpClient okHttpClient = new OkHttpClient();
-okHttpClient.newCall(request).enqueue(new Callback() {
-    @Override
-    public void onFailure(Call call, IOException e) {
-    }
-
-    @Override
-    public void onResponse(Call call, Response response) throws IOException {
-    }
-});
-</code></pre>
-<ul>
-<li>
-<h3 id="post同时上传文件和参数">POST同时上传文件和参数</h3>
-</li>
-</ul>
-<pre><code>OkHttpClient mOkHttpClient = new OkHttpClient();
-String url = &quot;&quot;;
-File file = new File(&quot;path&quot;);
-String TYPE = &quot;application/octet-stream&quot;;
-RequestBody fileBody = RequestBody.create(MediaType.parse(TYPE), file);
-RequestBody requestBody = new MultipartBody.Builder()
-        .addFormDataPart(&quot;key&quot;, &quot;value&quot;)
-        .setType(MultipartBody.FORM)
-        .addFormDataPart(&quot;fileKey&quot;, file.getName(), fileBody)
-        .build();
-
-Request request = new Request.Builder()
-        .url(url)
-        .addHeader(&quot;key&quot;, &quot;value&quot;)
-        .post(requestBody)
-        .build();
-
-mOkHttpClient.newCall(request).enqueue(new Callback() {
-    @Override
-    public void onFailure(Call call, IOException e) {
-
-    }
-
-    @Override
-    public void onResponse(Call call, Response response) throws IOException {
-
-    }
-});
-</code></pre>
- </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 animate-box">
-                        
-                    </div>
-                </div>
-
-                <div class="row">
-    <div class="col-md-12 animate-box">
-        
-    </div>
-</div>
-
+      <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box article-box" style="height: 25em;">
+        <figure class="img-box">
+          <a href="https://lsmya.github.io/8Af10DBI2">
+            
+          </a>
+        </figure>
+        <span class="fh5co-meta">
+          
+            <div class="tag-container">
+              
+                <a href="https://lsmya.github.io/imageview" class="tag">ImageView, </a>
+              
+                <a href="https://lsmya.github.io/recyclerview" class="tag">recyclerview, </a>
+              
+                <a href="https://lsmya.github.io/android" class="tag">android, </a>
+              
+                <a href="https://lsmya.github.io/okhttp3" class="tag">okhttp3, </a>
+              
             </div>
+          
+        </span>
+        <h3 class="fh5co-article-title">
+          <a href="https://lsmya.github.io/8Af10DBI2">android常用自定义view、工具类、dialog、http请求、6.0权限申请</a>
+        </h3>
+        <span class="fh5co-meta fh5co-date">2019-06-04</span>
+      </article>
+    
+      <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box article-box" style="height: 25em;">
+        <figure class="img-box">
+          <a href="https://lsmya.github.io/okhttp3">
+            
+          </a>
+        </figure>
+        <span class="fh5co-meta">
+          
+            <div class="tag-container">
+              
+                <a href="https://lsmya.github.io/android" class="tag">android, </a>
+              
+                <a href="https://lsmya.github.io/okhttp3" class="tag">okhttp3, </a>
+              
+            </div>
+          
+        </span>
+        <h3 class="fh5co-article-title">
+          <a href="https://lsmya.github.io/okhttp3">OkHttp3使用</a>
+        </h3>
+        <span class="fh5co-meta fh5co-date">2019-04-25</span>
+      </article>
+    
+    <div class="clearfix visible-lg-block visible-md-block visible-sm-block visible-xs-block"></div>
 
-        </article>
-    </div>
+  </div>
+
+  <div class="pagination-box animate-box">
+    
+    
+  </div>
 </div>
 
-    
 
-    <!-- 返回顶部 -->
-    <div class="back-to-top">
-    
-        <a href="#!" id="tool-toc" class="hidden-xs hidden-sm">
-            <i class="fa fa-map"></i>
-        </a>
-        <br>
-    
-    <a href="#top" class="hidden-xs hidden-sm"><i class="fa fa-paper-plane"></i></a>
-</div>
-
-<div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96">添加依赖</a></li>
-<li><a href="#%E5%BC%82%E6%AD%A5get">异步GET</a></li>
-<li><a href="#%E5%BC%82%E6%AD%A5post%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95">异步POST提交表单</a></li>
-<li><a href="#%E5%BC%82%E6%AD%A5post%E6%8F%90%E4%BA%A4%E5%AD%97%E7%AC%A6%E4%B8%B2">异步POST提交字符串</a></li>
-<li><a href="#post%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%92%8C%E5%8F%82%E6%95%B0">POST同时上传文件和参数</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-</div>
-
-
-    
 <footer id="fh5co-footer">
   <p><p style="text-align: center">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p></p>
 </footer>
 
 
-    <!-- jQuery -->
+<!-- jQuery -->
 <script src="https://lsmya.github.io/media/scripts/_vendors/jquery.min.js"></script>
 <!-- img lazy load -->
 <script src="https://lsmya.github.io/media/scripts/_vendors/jquery.lazyload.min.js"></script>
