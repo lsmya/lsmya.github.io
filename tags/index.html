@@ -1,313 +1,162 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>小书本</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<meta name="description" content="小可爱一起嗨吗"/>
-<meta name="keywords" content="小可爱一起嗨吗"/>
-
-<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico">
-
+<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1581523819987">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://lsmya.github.io/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<!-- Modernizr JS -->
-<script src="https://lsmya.github.io/media/scripts/_vendors/modernizr-2.6.2.min.js"></script>
-<!-- FOR IE9 below -->
-<!--[if lt IE 9]>
-<scripts src="https://lsmya.github.io/media/scripts/_vendors/respond.min.js"></scripts>
-<![endif]-->
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
-<!-- Comment -->
-
-
-
-<!-- katex -->
-<!--<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet">-->
-
-<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
 
 
 
 </head>
 <body>
-<div id="fh5co-offcanvas">
-    <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
-        <span><i class="icon-cross3"></i> <span>Close</span></span>
-    </a>
-    <div class="fh5co-bio">
-        <figure>
-            <img src="https://lsmya.github.io/media/images/avatar.png" alt="小书本"
-                 class="img-responsive">
-        </figure>
-        <a href="https://lsmya.github.io/post/about/"><h3 class="heading">ABOUT ME</h3></a>
-        <h2>小书本</h2>
-        <p>小可爱一起嗨吗</p>
-        <ul class="fh5co-social">
-            
-                <li>
-                    
-                </li>
-            
-                <li>
-                    
-                </li>
-            
-                <li>
-                    
-                </li>
-            
-                <li>
-                    
-                </li>
-            
-                <li>
-                    
-                </li>
-            
-        </ul>
-    </div>
-
-    <div class="fh5co-menu">
-
-        <!-- 标签 -->
-        <div class="fh5co-box">
-            <a href="https://lsmya.github.io/tags/"><h3 class="heading">👉标签</h3></a>
-            <ul>
-                
-                    <li><a href="https://lsmya.github.io/adobe">Adobe</a></li>
-                
-                    <li><a href="https://lsmya.github.io/android">android</a></li>
-                
-                    <li><a href="https://lsmya.github.io/swift">swift</a></li>
-                
-                    <li><a href="https://lsmya.github.io/ios">ios</a></li>
-                
-                    <li><a href="https://lsmya.github.io/searchview">SearchView</a></li>
-                
-                    <li><a href="https://lsmya.github.io/dialog">Dialog</a></li>
-                
-                    <li><a href="https://lsmya.github.io/imageview">ImageView</a></li>
-                
-                    <li><a href="https://lsmya.github.io/recyclerview">recyclerview</a></li>
-                
-                    <li><a href="https://lsmya.github.io/okhttp3">okhttp3</a></li>
-                
-                    <li><a href="https://lsmya.github.io/idea">idea</a></li>
-                
-                    <li><a href="https://lsmya.github.io/svn">svn</a></li>
-                
-                    <li><a href="https://lsmya.github.io/targetsdkversion28">targetSdkVersion28</a></li>
-                
-            </ul>
+<div class="main gt-bg-theme-color-first">
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            小书本
         </div>
     </div>
-</div>
-
-<header id="fh5co-header">
-    <div class="container-fluid">
-        <div class="row">
-            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-            <ul class="fh5co-social">
-                
-                    <li>
-                        <a href="https://lsmya.github.io"
-                        
-                        >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="https://lsmya.github.io" class="menu gt-a-link">
                             首页
                         </a>
-                    </li>
-                
-                    <li>
-                        <a href="http://www.lsmya.cn/tag/android/"
-                        
-                        >
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="http://www.lsmya.cn/tag/android/" class="menu gt-a-link">
                             Android
                         </a>
-                    </li>
-                
-                    <li>
-                        <a href="http://www.lsmya.cn/tag/ios/"
-                        
-                        >
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="http://www.lsmya.cn/tag/ios/" class="menu gt-a-link">
                             IOS
                         </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://lsmya.github.io/tags"
-                        
-                        >
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://lsmya.github.io/tags" class="menu gt-a-link">
                             标签
                         </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://lsmya.github.io/about"
-                        
-                        >
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://lsmya.github.io/about" class="menu gt-a-link">
                             我
                         </a>
-                    </li>
-                
-            </ul>
-            <div class="col-lg-12 col-md-12 text-center">
-                <h1 id="fh5co-logo">
-                    <a href="https://lsmya.github.io">小书本 </a>
-                </h1>
-            </div>
+                    
+                </div>
+            
         </div>
     </div>
-</header>
+</nav>
 
+        <div class="tags-container">
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/adobe">#Adobe</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/android">#android</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/swift">#swift</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/ios">#ios</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/searchview">#SearchView</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/dialog">#Dialog</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/imageview">#ImageView</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/recyclerview">#recyclerview</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/okhttp3">#okhttp3</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/idea">#idea</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/svn">#svn</a>
+            
+                <a class="tag gt-c-content-color-first gt-a-link"
+                   href="https://lsmya.github.io/targetsdkversion28">#targetSdkVersion28</a>
+            
+        </div>
 
-<div class="container-fluid" style="height: 100%;">
-    <div class="row fh5co-post-entry">
-
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">小可爱一起嗨吗</div>
+    <div class="social-container">
         
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/adobe">Adobe</a>
-                </h2>
-            </article>
+            
         
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/android">android</a>
-                </h2>
-            </article>
+            
         
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/swift">swift</a>
-                </h2>
-            </article>
+            
         
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/ios">ios</a>
-                </h2>
-            </article>
+            
         
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/searchview">SearchView</a>
-                </h2>
-            </article>
+            
         
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/dialog">Dialog</a>
-                </h2>
-            </article>
+            
         
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/imageview">ImageView</a>
-                </h2>
-            </article>
-        
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/recyclerview">recyclerview</a>
-                </h2>
-            </article>
-        
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/okhttp3">okhttp3</a>
-                </h2>
-            </article>
-        
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/idea">idea</a>
-                </h2>
-            </article>
-        
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/svn">svn</a>
-                </h2>
-            </article>
-        
-            <article class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xxs-12 animate-box">
-                <h2 class="fh5co-article-title">
-                    <i class="fa fa-tag" style="opacity: .6; font-size: 19px;"></i>
-                    <a href="https://lsmya.github.io/targetsdkversion28">targetSdkVersion28</a>
-                </h2>
-            </article>
-        
-        <div class="clearfix visible-lg-block visible-md-block visible-sm-block visible-xs-block"></div>
-
     </div>
-
-    
-<footer id="fh5co-footer">
-  <p><p style="text-align: center">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p></p>
-</footer>
-
+    <p style="text-align: center">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p> | <a href="https://lsmya.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-<!-- jQuery -->
-<script src="https://lsmya.github.io/media/scripts/_vendors/jquery.min.js"></script>
-<!-- img lazy load -->
-<script src="https://lsmya.github.io/media/scripts/_vendors/jquery.lazyload.min.js"></script>
-<!-- jQuery Easing -->
-<script src="https://lsmya.github.io/media/scripts/_vendors/jquery.easing.1.3.js"></script>
-<!-- Bootstrap -->
-<script src="https://lsmya.github.io/media/scripts/_vendors/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="https://lsmya.github.io/media/scripts/_vendors/jquery.waypoints.min.js"></script>
-<!-- Main JS -->
-<script src="https://lsmya.github.io/media/scripts/_vendors/main.js"></script>
-<!-- Md5 Min JS -->
-<script src="https://lsmya.github.io/media/scripts/_vendors/md5.min.js"></script>
-<!-- katex -->
-<!--<script src="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.js"></script>-->
-<!-- highlight -->
-<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
-
-
-<script type="application/javascript">
-    // 代码高亮
-    hljs.initHighlightingOnLoad();
-
-    // img 懒加载
-    $(function () {
-        $("img.lazy").lazyload({
-            effect: "fadeIn",  // 懒加载动画
-            threshold: 180  // 在图片距离屏幕180px时提前载入
-        });
-        // tooltip
-        $('[data-toggle="tooltip"]').tooltip();
-
-        // 目录
-        $('#tool-toc').click(function () {
-            $('.post-toc').toggle();
-        });
-    });
-
-    
+<script>
+    hljs.initHighlightingOnLoad()
 </script>
 
-
-
-
+    </div>
+</div>
 </body>
 </html>
