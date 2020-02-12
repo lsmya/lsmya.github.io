@@ -1,379 +1,364 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>小书本</title>
-<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1581523819987">
-<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" >
+
+<title>文章归档 | 小书本</title>
+<meta name="description" content="小可爱一起嗨吗">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://lsmya.github.io/favicon.ico?v=1581523965470">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://lsmya.github.io/styles/main.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
-<!-- DEMO JS -->
-<script src="media/scripts/index.js"></script>
 
 
 
-</head>
-<body>
-<div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            小书本
-        </div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://lsmya.github.io">
+        <img src="https://lsmya.github.io/images/avatar.png?v=1581523965470" class="site-logo">
+        <h1 class="site-title">小书本</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
-            
-                <div class="nav-item">
-                    
-                        <a href="https://lsmya.github.io" class="menu gt-a-link">
-                            首页
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="http://www.lsmya.cn/tag/android/" class="menu gt-a-link">
-                            Android
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="http://www.lsmya.cn/tag/ios/" class="menu gt-a-link">
-                            IOS
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="https://lsmya.github.io/tags" class="menu gt-a-link">
-                            标签
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="https://lsmya.github.io/about" class="menu gt-a-link">
-                            我
-                        </a>
-                    
-                </div>
-            
-        </div>
+    <div>
+      
+        
+          <a href="https://lsmya.github.io" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="http://www.lsmya.cn/tag/android/" class="site-nav">
+            Android
+          </a>
+        
+      
+        
+          <a href="http://www.lsmya.cn/tag/ios/" class="site-nav">
+            IOS
+          </a>
+        
+      
+        
+          <a href="https://lsmya.github.io/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="https://lsmya.github.io/about" class="site-nav">
+            我
+          </a>
+        
+      
     </div>
-</nav>
-
-        
-
-<div class="archives-container">
-    
-        <h2 class="year gt-c-cotent-color-first">2019</h2>
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/Hz9lrueIV">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-08-21&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Mac 关闭 Adobe Creative Cloud
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/K4mr3AfWs">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-07-15&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Android原生方法与js交互
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/4M_SXdaMQ">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-07-05&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            UILabel
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/uiimageview">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-07-05&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            UIImageView
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/8Cc7bkeRE">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-07-05&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Cocoapods导入依赖包
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/SviSTMcBY">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-07-04&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            swift 小菊花加载动画
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/b1QSAuPuF">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-06-20&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            SearchView使用详解
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/NNY7r7Hh6">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-06-19&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Manifest merger failed with multiple errors, see logs
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/id0YeYcLY">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-06-14&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            关闭Dialog后软键盘无法关闭问题
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/8Af10DBI2">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-06-04&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            android常用自定义view、工具类、dialog、http请求、6.0权限申请
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/4nYuIAmMV">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-06-04&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            svn连接https报错问题: E230001: Server SSL certificate verification failed: certificate issued
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/BB2sAujIU">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-05-29&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Android APP应用启动页白屏优化(StartingWindow)
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/k99RZfK">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-05-16&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            ImageView的scaleType属性
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/DM3QDjJEx">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-05-16&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            无法通过“application/vnd.android.package-archive” action安装应用
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/cB7Rhv9_D">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-05-16&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            targetSdkVersion 28 http请求报错CLEARTEXT communication to *** not permitted by network security policy
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/Ibf3l7ix0">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-05-13&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            recyclerView的item点击事件在onCreateViewHolder中写和在onBindViewHolder中写有何区别？如何优化？
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/IdZIG9X8L">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-05-09&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            xcode控制台打印 CUIThemeStore：No theme registered with id=0
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/AsZIYRD5z">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-05-09&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            ios--解决 Reading from private effective user settings
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/androidLogin">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-04-30&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Android第三方登录（QQ、WeChat）
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/-tCqrpiVs">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-04-25&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Android使用Lambda表达式
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/lgewWsqKB">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-04-25&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Android 依赖库发布（上传 Library 到 JCenter）
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://lsmya.github.io/okhttp3">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2019-04-25&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            OkHttp3使用
-                        </div>
-                    </a>
-                </article>
-            
-        
-    
-</div>
-
-        <div class="pagination-container">
-    
-    
-</div>
-
-
-        <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first">小可爱一起嗨吗</div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
     <div class="social-container">
+      
         
-            
+          <a class="social-link" href="https://github.com/lsmya" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
         
-            
+      
         
-            
+      
         
-            
+      
         
-            
+      
         
-            
-        
+      
     </div>
-    <p style="text-align: center">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p> | <a href="https://lsmya.github.io/atom.xml" target="_blank">RSS</a>
+    <div class="site-description">
+      小可爱一起嗨吗
+    </div>
+    <div class="site-footer">
+      <p style="text-align: center">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p> | <a class="rss" href="https://lsmya.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
-<script>
-    hljs.initHighlightingOnLoad()
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+
+          <h2 class="archives-title">文章归档</h2>
+          <div class="archives-container">
+            
+              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2019</h2>
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/Hz9lrueIV">
+                      <h2 class="post-title">
+                        Mac 关闭 Adobe Creative Cloud
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/K4mr3AfWs">
+                      <h2 class="post-title">
+                        Android原生方法与js交互
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/4M_SXdaMQ">
+                      <h2 class="post-title">
+                        UILabel
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/uiimageview">
+                      <h2 class="post-title">
+                        UIImageView
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/8Cc7bkeRE">
+                      <h2 class="post-title">
+                        Cocoapods导入依赖包
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/SviSTMcBY">
+                      <h2 class="post-title">
+                        swift 小菊花加载动画
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/b1QSAuPuF">
+                      <h2 class="post-title">
+                        SearchView使用详解
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/NNY7r7Hh6">
+                      <h2 class="post-title">
+                        Manifest merger failed with multiple errors, see logs
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/id0YeYcLY">
+                      <h2 class="post-title">
+                        关闭Dialog后软键盘无法关闭问题
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/8Af10DBI2">
+                      <h2 class="post-title">
+                        android常用自定义view、工具类、dialog、http请求、6.0权限申请
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/4nYuIAmMV">
+                      <h2 class="post-title">
+                        svn连接https报错问题: E230001: Server SSL certificate verification failed: certificate issued
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/BB2sAujIU">
+                      <h2 class="post-title">
+                        Android APP应用启动页白屏优化(StartingWindow)
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/k99RZfK">
+                      <h2 class="post-title">
+                        ImageView的scaleType属性
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/DM3QDjJEx">
+                      <h2 class="post-title">
+                        无法通过“application/vnd.android.package-archive” action安装应用
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/cB7Rhv9_D">
+                      <h2 class="post-title">
+                        targetSdkVersion 28 http请求报错CLEARTEXT communication to *** not permitted by network security policy
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/Ibf3l7ix0">
+                      <h2 class="post-title">
+                        recyclerView的item点击事件在onCreateViewHolder中写和在onBindViewHolder中写有何区别？如何优化？
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/IdZIG9X8L">
+                      <h2 class="post-title">
+                        xcode控制台打印 CUIThemeStore：No theme registered with id=0
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/AsZIYRD5z">
+                      <h2 class="post-title">
+                        ios--解决 Reading from private effective user settings
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/androidLogin">
+                      <h2 class="post-title">
+                        Android第三方登录（QQ、WeChat）
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/-tCqrpiVs">
+                      <h2 class="post-title">
+                        Android使用Lambda表达式
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/lgewWsqKB">
+                      <h2 class="post-title">
+                        Android 依赖库发布（上传 Library 到 JCenter）
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="https://lsmya.github.io/okhttp3">
+                      <h2 class="post-title">
+                        OkHttp3使用
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+            
+          </div>
+
+          <div class="pagination-container">
+  
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
 
-    </div>
-</div>
-</body>
+
+
+
+  </body>
 </html>
